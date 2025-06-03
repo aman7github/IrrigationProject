@@ -11,13 +11,11 @@ const FilterDiv = () => {
   const filterByStatus=(val)=>{
 
      let statusData = filterData.map((el)=>{
-
         let status= realTime < el.startTime
         ? "pending"
         : realTime < el.endTime
         ? "in progress"
         : "completed";
-      
         return {...el,status}
      })
      
@@ -47,8 +45,6 @@ const FilterDiv = () => {
   
   return <>
   
-  
-     
       <div  className='InputContainer' >
         <select className="InputBox" onChange={(e)=>{filterByStatus(e.target.value)}} >
         <option  value="" >Filter By Status</option>

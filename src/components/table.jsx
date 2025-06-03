@@ -13,7 +13,7 @@ import Box from '@mui/material/Box';
 
 const IrrigationTable = () => {
 
-    const {setRealTime,realTimeToMillitryFn,realTime,data} = useContext(timeContext)
+    const {setRealTime,realTimeToMillitryFn,realTime,data,totalIrrigatedPlots} = useContext(timeContext)
 
     useEffect(() => {
      let id =setInterval(()=>{
@@ -30,16 +30,20 @@ const IrrigationTable = () => {
      return realTime<el.startTime?"rgb(236, 230, 215)":realTime<el.endTime?"rgb(220, 234, 242)":"rgb(221, 236, 222)"
     }
                                    
-   console.log('hey', realTime);
+  
    
 
   return<>
 
   <Grid container justifyContent={'center'} alignItems={'center'}  direction='column' rowGap={'2rem'} sx={{ width:{xs:"98%",sm:"98%",md:"90%",lg:"85%"}
   , minHeight:"10rem" , backgroundColor:"rgb(82, 190, 252)", color:"white"   }}>
-        
-        <Grid sx={{color:"white",fontSize:"1.9rem"}} justifyContent={'center'} alignItems={'center'}   marginTop="5rem" >Irrigation System</Grid>
-  
+
+     <Grid container direction={'row'}  sx={{width:'80%'}} marginTop="5rem" justifyContent={'space-between'} >
+         <Grid container  sx={{color:"white",fontSize:"0.8rem",fontWeight:700}} justifyContent={'center'} alignItems={'center'} > Total : {totalIrrigatedPlots}</Grid>
+         <Grid container sx={{color:"white",fontSize:"1.7rem",fontWeight:500}} justifyContent={'center'} alignItems={'center'}    >Irrigation System</Grid>
+          <Grid width='15%'></Grid>
+      </Grid>
+
    <TableContainer component={Paper} sx={{ width:{xs:"90%",sm:"90%",md:"80%",lg:"80%"}, 
               borderRadius:"1rem",color:"gray",padding:"1rem"  }} >
      <Table  size="small" aria-label="a dense table">
@@ -98,38 +102,3 @@ export default IrrigationTable
 
 
 
-
-  //  <table>
-  //       <thead>
-  //           <tr>
-  //               <th>S.N.</th>
-  //               <th>Plot</th>
-  //               <th>RunBy</th>
-  //               <th>Start Time</th>
-  //               <th>End Time</th>
-  //               <th>Status</th>
-  //           </tr>
-  //       </thead>
-  //       <tbody>
-
-
-  //           {
-
-  //           data?.map((el,i)=>{
-            
-  //                return <tr key={i+Math.random()} >
-  //                             <td>{el.index+1}</td>
-  //                             <td>{el.plot}</td>
-  //                             <td>{el.RunBy}</td>
-  //                             <td>{el.startTime}</td>
-  //                             <td>{el.endTime}</td>
-  //                             <td>{realTime<el.startTime?"Pending":realTime<el.endTime?"In Progress"
-  //                                  :"Completed" }
-  //                             </td>
-  //                            </tr>
-                        
-      
-  //             })
-  //           }
-  //       </tbody>
-  //    </table>

@@ -16,10 +16,11 @@ const ContextProvider = ({children}) => {
     const [filterData,setFilterData]=useState([])
     const [numPlots,setNumPlots] = useState(0)  
     const [returnVal,setReturnVal] = useState(false)
+    const [totalIrrigatedPlots,setTotalIrrigatedPlots] = useState(0)
 
 
     return <timeContext.Provider value={{realTimeToMillitryFn,realTime,setRealTime,
-                            data,setData,filterData,setFilterData,numPlots,setNumPlots,setReturnVal,returnVal }}  >
+                            data,setData,filterData,setFilterData,numPlots,setNumPlots,setReturnVal,returnVal,setTotalIrrigatedPlots,totalIrrigatedPlots }}  >
              {children}
           </timeContext.Provider>
 }

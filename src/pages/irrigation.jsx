@@ -11,10 +11,9 @@ console.log('parent render');
 
 return<>
 <Grid container direction={'column'} columns={3} rowGap={2} 
-  justifyContent={'center'} alignItems={'center'} sx={{minHeight:'35rem'}} >
+  justifyContent={'center'} alignItems={'center'} sx={{minHeight:'35rem'}}  >
    <Form  />
    <FilterDiv />
-   
    <IrrigationTable  /> 
 </Grid>
 </>
