@@ -13,7 +13,7 @@
             alert(`Entered Time Should Not Be Less Than Current Time. The Current Time is ${realTime}`)
             return false
          }else if(eTime<sTime){
-             alert("start time is less than the end time, it implies that the irrigation cycle spans across two different days, and the total runtime will exceed 12 hours. This is considered a long-duration irrigation schedule.")
+             alert("Irrigaton Cycle Will be created but entered start time is less than the end time, it implies irrigation cycle spans across two different days, and the total runtime will exceed 12 hours.")
              return true
          }else{
            return true
