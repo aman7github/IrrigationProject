@@ -75,7 +75,8 @@ Irrigation cycles can also be filtered based on plot numbers.
 # 10. 📈 Total Irrigated Plots
 The total number of irrigated plots is always visible in the header for quick tracking.  
 
-![Screenshot (673)](https://github.com/user-attachments/assets/d9bcf8af-37dd-47ac-804d-772e3a1089d0)
+![Screenshot (674)](https://github.com/user-attachments/assets/922951e9-af20-4451-821d-f18f26782036)
+
 
 
 ## 📦 Tech Stack
